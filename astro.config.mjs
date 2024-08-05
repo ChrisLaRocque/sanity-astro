@@ -18,11 +18,12 @@ export default defineConfig({
       dataset: PUBLIC_SANITY_DATASET,
       useCdn: false, // See note on using the CDN
       apiVersion: "2023-07-24", // insert the current date to access the latest version of the API
-      studioBasePath: "/admin",
+      studioBasePath: "/studio",
       stega: {
-        studioUrl: "/admin",
+        studioUrl: "/studio",
       },
     }),
     react(),
   ],
+  output: "server",
 });
