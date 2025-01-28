@@ -1,3 +1,4 @@
+// ./src/sanity/schemaTypes/post.ts
 import { defineField, defineType } from "sanity";
 
 export const postType = defineType({

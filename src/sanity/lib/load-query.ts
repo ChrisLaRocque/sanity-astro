@@ -1,3 +1,4 @@
+// ./src/sanity/lib/load-query.ts
 import { type QueryParams } from "sanity";
 import { sanityClient } from "sanity:client";
 
@@ -14,7 +15,7 @@ export async function loadQuery<QueryResponse>({
 }) {
   if (visualEditingEnabled && !token) {
     throw new Error(
-      "The `SANITY_API_READ_TOKEN` environment variable is required during Visual Editing.",
+      "The `SANITY_API_READ_TOKEN` environment variable is required during Visual Editing."
     );
   }
 
@@ -29,7 +30,7 @@ export async function loadQuery<QueryResponse>({
       resultSourceMap: visualEditingEnabled ? "withKeyArraySelector" : false,
       stega: visualEditingEnabled,
       ...(visualEditingEnabled ? { token } : {}),
-    },
+    }
   );
 
   return {

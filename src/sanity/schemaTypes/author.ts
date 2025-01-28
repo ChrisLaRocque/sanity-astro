@@ -1,3 +1,4 @@
+// ./src/sanity/schemaTypes/author.ts
 import { defineField, defineType } from "sanity";
 
 export const authorType = defineType({

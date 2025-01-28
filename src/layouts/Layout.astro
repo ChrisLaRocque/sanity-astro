@@ -1,24 +1,30 @@
 ---
+// ./src/layouts/Layout.astro
 import { VisualEditing } from "@sanity/astro/visual-editing";
 
-export type props = {
-  title: string;
-};
-const { title } = Astro.props;
 const visualEditingEnabled =
   import.meta.env.PUBLIC_SANITY_VISUAL_EDITING_ENABLED == "true";
 ---
-
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
   </head>
   <body>
     <slot />
     <VisualEditing enabled={visualEditingEnabled} />
   </body>
 </html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>

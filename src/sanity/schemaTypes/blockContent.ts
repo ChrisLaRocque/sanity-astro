@@ -1,3 +1,4 @@
+// ./src/sanity/schemaTypes/blockContent.ts
 import { defineType, defineArrayMember } from "sanity";
 
 /**
